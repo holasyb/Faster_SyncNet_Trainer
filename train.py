@@ -285,7 +285,6 @@ def train(device, model, train_data_loader, test_data_loader, optimizer,
 
             # Transform data to CUDA device
             x = x.to(device)
-            # x = x / 255. * 2. - 1.
 
             mel = mel.to(device)
 
@@ -327,7 +326,6 @@ def eval_model(test_data_loader, global_step, device, model, checkpoint_dir):
 
             # Transform data to CUDA device
             x = x.to(device)
-            # x = x / 255. * 2. - 1.
 
             mel = mel.to(device)
             y = y.to(device)
